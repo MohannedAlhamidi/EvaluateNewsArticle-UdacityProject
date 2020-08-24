@@ -1,6 +1,6 @@
 const app = require('./app');
 
-app.listen(8080, function(){
-    console.log("Server starts on port 8080");
-    console.log(`Your API key is ${process.env.API_KEY}`);
+app.listen(8081, function(){
+    console.log("Server starts on port 8081");
+    console.log(`Your API key is ${process.env.APP_KEY}`);
 });

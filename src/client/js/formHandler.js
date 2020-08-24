@@ -22,12 +22,11 @@ function handleSubmit(event) {
         .then(function(res) {
             // print for debugging
             console.log(res); 
-
             // Populate html with result
-            document.querySelector('section.url-results #polarity').innerHTML = res.polarity
-            document.querySelector('section.url-results #subjectivity').innerHTML = res.subjectivity
-            document.querySelector('section.url-results #polarity_confidence').innerHTML = res.polarity_confidence
-            document.querySelector('section.url-results #subjectivity_confidence').innerHTML = res.subjectivity_confidence
+            document.querySelector('section.url-results #polarity').innerHTML = `Polarity is : ${res.polarity}`
+            // document.querySelector('section.url-results #subjectivity').innerHTML = res.subjectivity
+            document.querySelector('section.url-results #polarity_confidence').innerHTML =`Polarity Confidence is : ${res.polarity_confidence}`
+            // document.querySelector('section.url-results #subjectivity_confidence').innerHTML = res.subjectivity_confidence
             document.querySelector('section.url-results #excerpt').innerHTML = res.text
         })
 
